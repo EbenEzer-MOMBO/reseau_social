@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:reseau_social/pages/details_page.dart';
 import 'package:reseau_social/pages/home_page.dart';
 
 void main() {
