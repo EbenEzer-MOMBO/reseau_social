@@ -1,14 +1,7 @@
 import 'package:flutter/material.dart';
 
-class MyStory extends StatelessWidget {
-  final String img;
-  final String pfp;
-  final String utilisateur;
-  const MyStory(
-      {required this.img,
-      required this.pfp,
-      required this.utilisateur,
-      super.key});
+class MyStoryPerso extends StatelessWidget{
+  const MyStoryPerso({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,8 +14,8 @@ class MyStory extends StatelessWidget {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(20.0),
-            child: Image.network(
-              img,
+            child: Image.asset(
+              "assets/images/tumblr_4928ab9d86f0bd0c8bc15aa4668fb72b_74d38c36_500.jpg",
               fit: BoxFit.cover,
               height: screen.height * 0.18,
               width: screen.width * 0.25,
@@ -41,8 +34,10 @@ class MyStory extends StatelessWidget {
           SizedBox(
             width: screen.height * 0.12,
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment:
+              MainAxisAlignment.spaceBetween,
+              crossAxisAlignment:
+              CrossAxisAlignment.start,
               children: [
                 Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -51,13 +46,16 @@ class MyStory extends StatelessWidget {
                     height: 30.0,
                     decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(30.0),
+                      borderRadius:
+                      BorderRadius.circular(30.0),
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(3.0),
+                    child: const Padding(
+                      padding: EdgeInsets.all(5.0),
                       child: CircleAvatar(
-                        backgroundImage: NetworkImage(pfp),
-                        radius: 14.0,
+                        backgroundColor: Colors.white,
+                        backgroundImage: AssetImage(
+                            "assets/images/icons8-plus-math-30.png"),
+                        radius: 10.0,
                       ),
                     ),
                   ),
@@ -65,13 +63,14 @@ class MyStory extends StatelessWidget {
                 const SizedBox(
                   height: 65,
                 ),
-                Align(
+                const Align(
                   alignment: Alignment.center,
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8),
+                    padding: EdgeInsets.symmetric(
+                        horizontal: 8),
                     child: Text(
-                      utilisateur,
-                      style: const TextStyle(
+                      "Add story",
+                      style: TextStyle(
                         color: Colors.white,
                         fontSize: 15.0,
                         fontWeight: FontWeight.bold,
@@ -86,4 +85,5 @@ class MyStory extends StatelessWidget {
       ),
     );
   }
+
 }

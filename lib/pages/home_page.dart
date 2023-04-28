@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:reseau_social/components/navbar.dart';
 import 'package:reseau_social/components/publication.dart';
 import 'package:reseau_social/components/story.dart';
+import 'package:reseau_social/components/story_personal.dart';
 import 'package:reseau_social/pages/details_page.dart';
 
 class HomePage extends StatelessWidget {
@@ -9,6 +10,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       //appbar
       appBar: PreferredSize(
@@ -93,24 +95,33 @@ class HomePage extends StatelessWidget {
                       scrollDirection: Axis.horizontal,
                       child: Row(
                         children: const [
+                          MyStoryPerso(),
                           MyStory(
-                            img: 'https://cdn.discordapp.com/attachments/1038926392538173481/1085977570748682270/211282ab-6d0a-4a4d-8c3a-5399fcfee2d0.JPG',
-                            pfp: 'https://static.wikia.nocookie.net/souleater/images/7/7a/Death_the_Kid_anime.jpg/revision/latest?cb=20150318142752&path-prefix=fr',
+                            img:
+                                'https://cdn.discordapp.com/attachments/1038926392538173481/1085977570748682270/211282ab-6d0a-4a4d-8c3a-5399fcfee2d0.JPG',
+                            pfp:
+                                'https://static.wikia.nocookie.net/souleater/images/7/7a/Death_the_Kid_anime.jpg/revision/latest?cb=20150318142752&path-prefix=fr',
                             utilisateur: 'Eben',
                           ),
                           MyStory(
-                            img: 'https://cdn.discordapp.com/attachments/877856468840370216/1101324025734647869/IMG_2019.JPG',
-                            pfp: 'https://cdn.discordapp.com/attachments/877856468840370216/1101324025734647869/IMG_2019.JPG',
+                            img:
+                                'https://cdn.discordapp.com/attachments/877856468840370216/1101324025734647869/IMG_2019.JPG',
+                            pfp:
+                                'https://cdn.discordapp.com/attachments/877856468840370216/1101324025734647869/IMG_2019.JPG',
                             utilisateur: 'Lizy',
                           ),
                           MyStory(
-                            img: 'https://cdn.discordapp.com/attachments/877856468840370216/1048130574289735690/f3ab8dc2-0e6d-42fe-a253-4ac10dbbcfc3.JPG',
-                            pfp: 'https://static.nike.com/a/images/f_auto,cs_srgb/w_1536,c_limit/2f987ad6-1f52-4720-8f67-38314a46c45b/les-meilleures-chaussures-%C3%A0-crampons-nike-football.jpg',
+                            img:
+                                'https://cdn.discordapp.com/attachments/877856468840370216/1048130574289735690/f3ab8dc2-0e6d-42fe-a253-4ac10dbbcfc3.JPG',
+                            pfp:
+                                'https://static.nike.com/a/images/f_auto,cs_srgb/w_1536,c_limit/2f987ad6-1f52-4720-8f67-38314a46c45b/les-meilleures-chaussures-%C3%A0-crampons-nike-football.jpg',
                             utilisateur: 'Parker',
                           ),
                           MyStory(
-                            img: 'https://cdn.discordapp.com/attachments/1042038051012083753/1070730597024157788/WhatsApp_Image_2023-02-02_at_12.39.47.jpeg',
-                            pfp: 'https://i.etsystatic.com/9718127/r/il/60a606/3493169772/il_1080xN.3493169772_jd1f.jpg',
+                            img:
+                                'https://cdn.discordapp.com/attachments/1042038051012083753/1070730597024157788/WhatsApp_Image_2023-02-02_at_12.39.47.jpeg',
+                            pfp:
+                                'https://i.etsystatic.com/9718127/r/il/60a606/3493169772/il_1080xN.3493169772_jd1f.jpg',
                             utilisateur: 'Lucia',
                           ),
                         ],

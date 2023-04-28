@@ -1,17 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:reseau_social/components/details_navbar.dart';
 
-class DetailsPage extends StatelessWidget{
+class DetailsPage extends StatelessWidget {
   const DetailsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //appbar
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios_new_rounded, color: Colors.black87,),
+          icon: const Icon(
+            Icons.arrow_back_ios_new_rounded,
+            color: Colors.black87,
+          ),
           onPressed: () => Navigator.pop(context),
         ),
         title: const Text(
@@ -20,8 +24,9 @@ class DetailsPage extends StatelessWidget{
         ),
       ),
 
+      //body
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 14),
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Column(
@@ -29,12 +34,19 @@ class DetailsPage extends StatelessWidget{
             children: [
               const ListTile(
                 leading: CircleAvatar(
-                  backgroundImage: AssetImage("assets/images/tumblr_a9d5f0b1818e54105042cd3714f313d0_e9c0862b_1280.jpg"),
+                  backgroundImage: AssetImage(
+                      "assets/images/tumblr_a9d5f0b1818e54105042cd3714f313d0_e9c0862b_1280.jpg"),
                 ),
-                title: Text("Megan Thee Stalion"),
+                title: Text("Megan Thee Stallion"),
                 subtitle: Text('Il y a 2 heures'),
                 trailing: Icon(Icons.more_vert),
               ),
+              const SizedBox(height: 20,),
+              const Text(
+                "Met Gala in bad bitch 👄",
+                style: TextStyle(fontSize: 16),
+              ),
+              const SizedBox(height: 20,),
               ClipRRect(
                 borderRadius: BorderRadius.circular(20),
                 child: Image.network(
@@ -44,7 +56,9 @@ class DetailsPage extends StatelessWidget{
                   width: double.infinity,
                 ),
               ),
-              const SizedBox(height: 12,),
+              const SizedBox(
+                height: 12,
+              ),
               ClipRRect(
                 borderRadius: BorderRadius.circular(20),
                 child: Image.network(
@@ -54,7 +68,9 @@ class DetailsPage extends StatelessWidget{
                   width: double.infinity,
                 ),
               ),
-              const SizedBox(height: 12,),
+              const SizedBox(
+                height: 12,
+              ),
               ClipRRect(
                 borderRadius: BorderRadius.circular(20),
                 child: Image.network(
@@ -64,21 +80,17 @@ class DetailsPage extends StatelessWidget{
                   width: double.infinity,
                 ),
               ),
-              const SizedBox(height: 12,),
-
+              const SizedBox(
+                height: 12,
+              ),
               const SizedBox(
                 height: 10,
               ),
-
             ],
           ),
         ),
       ),
-
-      resizeToAvoidBottomInset: false,
-
       bottomNavigationBar: const DetailsNavbar(),
     );
   }
-
 }

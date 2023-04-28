@@ -38,7 +38,8 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
         ),
         BottomNavigationBarItem(
           icon: CircleAvatar(
-            backgroundImage: AssetImage("assets/images/tumblr_4928ab9d86f0bd0c8bc15aa4668fb72b_74d38c36_500.jpg"),
+            backgroundImage: AssetImage(
+                "assets/images/tumblr_4928ab9d86f0bd0c8bc15aa4668fb72b_74d38c36_500.jpg"),
             radius: 14.0,
           ),
           label: '',
