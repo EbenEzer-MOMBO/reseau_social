@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:reseau_social/components/details_navbar.dart';
-import 'package:reseau_social/pages/home_page.dart';
 
 class DetailsPage extends StatelessWidget{
   const DetailsPage({super.key});
@@ -13,12 +12,7 @@ class DetailsPage extends StatelessWidget{
         elevation: 0,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios_new_rounded, color: Colors.black87,),
-          onPressed: () => Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (_) => const HomePage(),
-            ),
-          ),
+          onPressed: () => Navigator.pop(context),
         ),
         title: const Text(
           "Fil d'actualité",
@@ -43,37 +37,34 @@ class DetailsPage extends StatelessWidget{
               ),
               ClipRRect(
                 borderRadius: BorderRadius.circular(20),
-                child: Hero(
-                  tag: 'main',
-                  child: Image.asset(
-                    "assets/images/tumblr_a9d5f0b1818e54105042cd3714f313d0_e9c0862b_1280.jpg",
-                    fit: BoxFit.cover,
-                    height: 200,
-                    width: double.infinity,
-                  ),
+                child: Image.network(
+                  "https://media.allure.com/photos/64341b7be133aa009624b594/master/pass/megan%20thee%20stallion%20curly%20bangs.jpg",
+                  fit: BoxFit.cover,
+                  height: 200,
+                  width: double.infinity,
                 ),
               ),
               const SizedBox(height: 12,),
-              // ClipRRect(
-              //   borderRadius: BorderRadius.circular(20),
-              //   child: Image.asset(
-              //     "assets/images/tumblr_a9d5f0b1818e54105042cd3714f313d0_e9c0862b_1280.jpg",
-              //     fit: BoxFit.cover,
-              //     height: 200,
-              //     width: double.infinity,
-              //   ),
-              // ),
-              // const SizedBox(height: 12,),
-              // ClipRRect(
-              //   borderRadius: BorderRadius.circular(20),
-              //   child: Image.asset(
-              //     "assets/images/tumblr_a9d5f0b1818e54105042cd3714f313d0_e9c0862b_1280.jpg",
-              //     fit: BoxFit.cover,
-              //     height: 200,
-              //     width: double.infinity,
-              //   ),
-              // ),
-              // const SizedBox(height: 12,),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Image.network(
+                  "https://s.yimg.com/ny/api/res/1.2/n9JGdcMB.CdNUEzqhB1vXA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD03OTQ-/https://media.zenfs.com/en/billboard_547/1f3752d196e080765e8ebbb8d7e2d400",
+                  fit: BoxFit.cover,
+                  height: 200,
+                  width: double.infinity,
+                ),
+              ),
+              const SizedBox(height: 12,),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Image.network(
+                  "https://static01.nyt.com/images/2022/05/05/fashion/02-met-gala-MEGANTHEESTALLION/02-met-gala-MEGANTHEESTALLION-facebookJumbo.jpg",
+                  fit: BoxFit.cover,
+                  height: 200,
+                  width: double.infinity,
+                ),
+              ),
+              const SizedBox(height: 12,),
 
               const SizedBox(
                 height: 10,

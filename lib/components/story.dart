@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 
 class MyStory extends StatelessWidget{
   final String img;
+  final String pfp;
   final String utilisateur;
   const MyStory({
     required this.img,
+    required this.pfp,
     required this.utilisateur,
     super.key
   });
@@ -20,8 +22,8 @@ class MyStory extends StatelessWidget{
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(20.0),
-            child: Image.asset(
-              "assets/images/tumblr_4928ab9d86f0bd0c8bc15aa4668fb72b_74d38c36_500.jpg",
+            child: Image.network(
+              img,
               fit: BoxFit.cover,
               height: screen.height*0.18,
               width: screen.width*0.25,
@@ -52,10 +54,10 @@ class MyStory extends StatelessWidget{
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(30.0),
                     ),
-                    child: const Padding(
-                      padding: EdgeInsets.all(3.0),
+                    child: Padding(
+                      padding: const EdgeInsets.all(3.0),
                       child: CircleAvatar(
-                        backgroundImage: AssetImage("assets/images/tumblr_4928ab9d86f0bd0c8bc15aa4668fb72b_74d38c36_500.jpg"),
+                        backgroundImage: NetworkImage(pfp),
                         radius: 14.0,
                       ),
                     ),
